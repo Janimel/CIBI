@@ -1,0 +1,39 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="YellowTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FFCA3A</item>
+        <item name="colorPrimaryDark">#E0A500</item>
+        <item name="colorAccent">#FFE499</item>
+    </style>
+
+    <style name="GreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#8AC926</item>
+        <item name="colorPrimaryDark">#537817</item>
+        <item name="colorAccent">#BAE576</item>
+    </style>
+
+    <style name="BlueTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#1982C4</item>
+        <item name="colorPrimaryDark">#0E486C</item>
+        <item name="colorAccent">#6FBCEC</item>
+    </style>
+
+    <style name="PurpleTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#6A4C93</item>
+        <item name="colorPrimaryDark">#3A2A51</item>
+        <item name="colorAccent">#B4A1CE</item>
+    </style>
+    
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+</resources>
