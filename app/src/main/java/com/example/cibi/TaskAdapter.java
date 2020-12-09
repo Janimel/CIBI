@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -16,18 +17,15 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.taskViewHolder
     private Lists activity;
     private DatabaseHandler taskDB;
 
-    public TaskAdapter(DatabaseHandler taskDB, Lists activity){
-        taskDB = taskDB;
+    public TaskAdapter(DatabaseHandler DB, Lists activity){
+        taskDB = DB;
         this.activity = activity;
     }
 
     public static class taskViewHolder extends RecyclerView.ViewHolder {
         public TextView title, desc;
-
-        public taskViewHolder( View itemView) {
+        public taskViewHolder(View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.tasktitle);
-            desc = itemView.findViewById(R.id.taskdesc);
         }
     }
 
@@ -36,7 +34,8 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.taskViewHolder
         notifyDataSetChanged();
     }
 
-    public taskViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
+    @NonNull
+    public taskViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.taskcard, parent, false);
         return new taskViewHolder(v);
     }

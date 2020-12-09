@@ -20,7 +20,6 @@ import java.util.List;
 public class Lists extends AppCompatActivity implements DialogCloseListener {
     private RecyclerView taskView;
     private TaskAdapter taskAdapt;
-    private RecyclerView.LayoutManager taskLayout;
     private List<TaskItems> taskList;
     private DatabaseHandler taskDB;
     Button toCalendar;
@@ -41,9 +40,8 @@ public class Lists extends AppCompatActivity implements DialogCloseListener {
 
         toAddTasks = findViewById(R.id.btn_AddTask);
 
-        taskLayout = new LinearLayoutManager(this);
         taskAdapt = new TaskAdapter(taskDB, this);
-        taskView.setLayoutManager(taskLayout);
+        taskView.setLayoutManager(new LinearLayoutManager(this));
         taskView.setAdapter(taskAdapt);
 
         taskList = taskDB.getAllTasks();
